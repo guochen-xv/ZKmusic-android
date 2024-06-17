@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <LinearLayout
+        android:id="@+id/pop_song_layout"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/pop_song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_font"
+            android:textColor="@color/colorBlack"
+            android:ellipsize="end"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_padding"
+            android:layout_marginRight="@dimen/my_padding"
+            android:text="@string/play_divide"
+            android:textSize="@dimen/normal_font"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/pop_song_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normal_font"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/pop_song_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_delete"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

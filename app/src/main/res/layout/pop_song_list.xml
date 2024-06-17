@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/my_padding"
+    android:paddingEnd="@dimen/my_padding"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/my_padding"
+        android:paddingBottom="@dimen/my_padding"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/song_play_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_play_order"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/my_padding"/>
+        <TextView
+            android:id="@+id/song_play_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/play_order"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"/>
+
+        <ImageView
+            android:id="@+id/song_play_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_del_all"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pop_song_list_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/song_play_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/my_padding"
+        android:paddingBottom="@dimen/my_padding"
+        android:gravity="center"
+        android:text="@string/play_close"
+        android:textSize="@dimen/big_font"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"/>
+</LinearLayout>

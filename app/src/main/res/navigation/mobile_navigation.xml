@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.android.music.fragment.home.HomeFragment"
+        android:label="@string/menu_home_music"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_theme" />
+        <action
+            android:id="@+id/action_HomeFragment_to_SongListFragment"
+            app:destination="@id/nav_song_list" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_history_song"
+            app:destination="@id/nav_history_song" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_like_song"
+            app:destination="@id/nav_like_song" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_download_song"
+            app:destination="@id/nav_download_song" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_scan_song"
+            app:destination="@id/nav_scan_song" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_local_song"
+            app:destination="@id/nav_local_song" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_blank_fragment"
+            app:destination="@id/nav_blank_fragment" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_zk"
+            app:destination="@id/nav_zk" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_local_song"
+        android:name="com.android.music.fragment.home.my.MyLocalSongFragment"
+        android:label="本地歌曲"
+        tools:layout="@layout/fragment_my_local_song">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_song_list"
+        android:name="com.android.music.fragment.SongListFragment"
+        android:label="歌单详情"
+        tools:layout="@layout/fragment_song_list">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_history_song"
+        android:name="com.android.music.fragment.home.my.MyHistorySongFragment"
+        android:label="最近常听的歌曲"
+        tools:layout="@layout/fragment_my_history_song">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_download_song"
+        android:name="com.android.music.fragment.home.my.MyDownloadSong"
+        android:label="下载歌曲"
+        tools:layout="@layout/fragment_my_download_song">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_like_song"
+        android:name="com.android.music.fragment.home.my.MyLikeSongFragment"
+        android:label="我喜欢"
+        tools:layout="@layout/fragment_my_like_song">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_zk"
+        android:name="com.android.music.fragment.home.my.ZKFragment"
+        android:label="ZK天地"
+        tools:layout="@layout/fragment_zk">
+    </fragment>
+    <!--侧边栏的导航-->
+    <fragment
+        android:id="@+id/nav_theme"
+        android:name="com.android.music.fragment.theme.themeFragment"
+        android:label="@string/menu_theme"
+        tools:layout="@layout/fragment_menu_theme">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_scan_song"
+        android:name="com.android.music.fragment.scansong.ScanSongFragment"
+        android:label="@string/menu_local_song"
+        tools:layout="@layout/fragment_menu_scansong">
+    </fragment>
+    <!--音乐馆轮播图跳转fragment-->
+    <fragment
+        android:id="@+id/nav_blank_fragment"
+        android:name="com.android.music.fragment.home.musichall.BlankFragment"
+        android:label="ZK音乐"
+        tools:layout="@layout/fragment_blank">
+    </fragment>
+    <!--全局导航-->
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.android.music.fragment.search.SearchFragment"
+        android:label="搜索歌曲"
+        tools:layout="@layout/fragment_search">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.android.music.fragment.AddPlaylistFragment"
+        android:label="新建歌单"
+        tools:layout="@layout/fragment_add_playlist">
+    </fragment>
+    <action android:id="@+id/action_global_nav_add" app:destination="@id/nav_add"/>
+    <action android:id="@+id/action_global_nav_search" app:destination="@id/nav_search"/>
+</navigation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_zk"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_theme"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_theme" />
+        <item
+            android:id="@+id/nav_scan_song"
+            android:icon="@drawable/ic_scan_song"
+            android:title="@string/menu_local_song" />
+        <item
+            android:id="@+id/nav_update_version"
+            android:icon="@drawable/ic_update_version"
+            android:onClick="update_version"
+            android:title="@string/menu_update_version" />
+        <item
+            android:id="@+id/nav_login_out"
+            android:icon="@drawable/ic_login_out"
+            android:onClick="login_out"
+            android:title="@string/menu_login_out"/>
+    </group>
+</menu>
